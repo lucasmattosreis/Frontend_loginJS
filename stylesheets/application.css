@@ -1,0 +1,98 @@
+.table-pesq-produto-col-preco {
+  min-width: 130px;
+  text-align: center;
+  display: none !important;
+}
+@media (min-width: 992px) {
+  .table-pesq-produto-col-preco {
+    display: block !important;
+  }
+  table.table-pesq-produto-col-preco {
+    display: table !important;
+  }
+  tr.table-pesq-produto-col-preco {
+    display: table-row !important;
+  }
+  th.table-pesq-produto-col-preco,
+  td.table-pesq-produto-col-preco {
+    display: table-cell !important;
+  }
+}
+.table-pesq-produto-col-estoque {
+  min-width: 100px;
+  text-align: center;
+  display: none !important;
+}
+@media (min-width: 992px) {
+  .table-pesq-produto-col-estoque {
+    display: block !important;
+  }
+  table.table-pesq-produto-col-estoque {
+    display: table !important;
+  }
+  tr.table-pesq-produto-col-estoque {
+    display: table-row !important;
+  }
+  th.table-pesq-produto-col-estoque,
+  td.table-pesq-produto-col-estoque {
+    display: table-cell !important;
+  }
+}
+.table-pesq-produto-col-status {
+  min-width: 100px;
+  text-align: center;
+}
+.table-pesq-produto-col-acoes {
+  min-width: 105px;
+  text-align: center;
+}
+
+#img-logo {
+  width: 100px;
+  position: absolute;
+  top: 5px;
+  left: 55px;
+  border-radius: 10px;
+}
+#botao-toggle{
+    position: absolute;
+    left: -10px;
+}
+#page-footer{
+position:absolute;
+    bottom:0;
+    width:100%;
+  }
+.login-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65vh; 
+}
+#login{
+background-color: black;
+            padding: 30px 45px;
+            border-radius: 15px;
+            color: #fff;
+            box-sizing: border-box;
+            width: 250px;
+          }
+
+#button{
+            background-color: dodgerblue;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            border-radius: 10px;
+            color: white;
+            font-size: 15px;
+}
+#letra-login{
+  color: white;
+  margin: 0;
+  display: block;
+
+}
+.mb-form{
+  margin-bottom: 10px;
+}
