@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml" >
+
+<head>
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>HSC</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/vendors.min.css"/>
+	<link rel="stylesheet" type="text/css" href="stylesheets/estilo.min.css"/>
+	<link rel="stylesheet" type="text/css" href="stylesheets/application.css"/>
+    <script>
+		let token = localStorage.getItem('token');
+		if(!token) {
+			window.location.href = 'login.html';
+		} 
+	</script>
+
+</head>
+
+<body>
+<div class="aw-layout-page">
+	<nav class="navbar  navbar-fixed-top  navbar-default  js-sticky-reference" id="main-navbar">
+		<div class="container-fluid">
+			<a class="navbar-brand  hidden-xs" href="#" id="img-logo">
+	    <div class="navbar-header">
+	     	
+	        	
+	      	</a>
+			<img id="img-logo" alt="HSC" src="images/logo.png" >
+	      	<ul class="nav  navbar-nav">
+	        	<li>
+	          		<a href="#" class="js-sidebar-toggle" id="botao-toggle"><i class="fa  fa-bars"></i></a>
+	        	</li>
+	      	</ul>
+	    </div>
+
+	    <ul class="nav navbar-nav  navbar-right">
+	    	<li>
+	        	<a href="#"><em class="fa  fa-sign-out"></em></a>
+	      	</li> 
+	    </ul>
+
+	  </div>
+	</nav>
+	
+	<aside class="aw-layout-sidebar  js-sidebar">
+		<div class="aw-layout-sidebar__content">
+
+	    	<nav class="aw-menu  js-menu">
+	      		<ul class="aw-menu__list">
+	
+	        		<li class="aw-menu__item">
+	          			<a href="dashboard.html"><i class="fa  fa-fw  fa-home"></i><span>Dashboard</span></a>
+	        		</li>
+	
+	        		<li class="aw-menu__item ">
+	          			<a href="#">
+	            			<i class="fa  fa-fw  fa-file-text"></i><span>Cadastros</span>
+	            			<i class="aw-menu__navigation-icon  fa"></i>
+	          			</a>
+	      
+	          			<ul class="aw-menu__list  aw-menu__list--sublist">
+	          				<li class="aw-menu__item  aw-menu__item--link"><a href="pesquisa-produtos.html">Pesquisa de produtos</a></li>
+				            <li class="aw-menu__item  aw-menu__item--link"><a href="cadastro-produto.html">Cadastro de produto</a></li>
+				            <li class="aw-menu__item  aw-menu__item--link"><a href="pesquisa-produtos.html">Pesquisa de produtos</a></li>
+				            <li class="aw-menu__item  aw-menu__item--link"><a href="produtos.html">Produtos</a></li>,
+	          			</ul>
+	        		</li>
+	
+	        		<li class="aw-menu__item  is-expanded">
+	          			<a href="#">
+	            			<i class="fa  fa-fw  fa-file-text"></i><span>Usuário</span>
+	            			<i class="aw-menu__navigation-icon  fa"></i>
+	          			</a>
+	
+	          			<ul class="aw-menu__list  aw-menu__list--sublist">
+				            <li class="aw-menu__item  aw-menu__item--link"><a href="esqueceu-a-senha.html">Esqueceu a senha</a></li>
+				            <li class="aw-menu__item  aw-menu__item--link"><a href="sair.html">Sair</a></li>
+	          			</ul>
+	        		</li>
+	
+	      		</ul>
+	    	</nav>
+		</div>
+	</aside>
+	
+	<section class="aw-layout-content  js-content">
+
+		<div class="page-header">
+			<div class="container-fluid">
+				<h1>
+					Hospital Santa Cecilia
+				</h1>
+			</div>
+		</div>
+
+		
+	</section>
+	
+	<footer class="aw-layout-footer  js-content">
+		<div class="container-fluid">
+			<span class="aw-footer-disclaimer">&copy; Hospital Santa Cecilia. Todos os direitos reservados.</span>
+		</div>
+	</footer>
+</div>
+
+<script src="javascripts/vendors.min.js"></script>
+<script src="javascripts/faetec.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml" >
+
+
+<head>
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>HSC</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/vendors.min.css"/>
+	<link rel="stylesheet" type="text/css" href="stylesheets/application.css"/>
+	<link rel="stylesheet" type="text/css" href="stylesheets/estilo.min.css"/>
+
+
+</head>
+
+<body>
+<div class="aw-layout-page">
+	<nav class="navbar  navbar-fixed-top  navbar-default  js-sticky-reference" id="main-navbar">
+		<div class="container-fluid">
+			<a class="navbar-brand  hidden-xs" href="#" id="img-logo">
+	    <div class="navbar-header">
+	     	
+	        	
+	      	</a>
+			<img id="img-logo" alt="HSC" src="images/logo.png" >
+	      	<ul class="nav  navbar-nav">
+
+	      	</ul>
+	    </div>
+	  </div>
+	</nav>
+
+		<div class="page-header">
+			<div class="container-fluid">
+				<h1>
+					Hospital Santa Cecilia
+				</h1>
+			</div class="container-fluid" class=mt-0>
+			<div class="login-container">
+				<div class="container-fluid " id=login>
+    				<h1 id="letra-login">Login</h1>
+
+					<form action="#" id="form_login" method="POST">
+
+						<input id="email" class="form-control mb-form" type="email" placeholder="email">
+			
+						<input id="password" class="form-control mb-form" type="password" placeholder="senha">
+	
+						<button id=button>Enviar</button>
+					</form>
+				</div>	
+			</div>
+		</div>
+
+
+		<div class="container-fluid" id= "page-footer">
+			<span class="aw-footer-disclaimer">&copy; Hospital Santa Cecilia. Todos os direitos reservados.</span>
+		</div>
+
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+$("#form_login").submit(function(event){
+	event.preventDefault();
+	let email = $("#email").val();
+	let password = $("#password").val();
+
+	
+
+			var postData = {
+			email, password
+			};
+
+			let axiosConfig = {
+			headers: {
+				'Content-Type': 'application/json;charset=UTF-8'
+			}
+			};
+
+			axios.post('http://localhost:3333/authenticate', postData, axiosConfig)
+			.then((res) => {
+				localStorage.setItem('token', res.data.token);
+				window.location.href = 'dashboard.html';
+			})
+			.catch((err) => {
+				swal("Autenticação inválida!");
+			})
+	})
+
+</script>
+<script src="javascripts/vendors.min.js"></script>
+<script src="javascripts/faetec.min.js"></script>
+</body>
+</html>
